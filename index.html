@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+   
+    
+    <main>
+        <div class="time">
+            <span id="hr">00</span>
+            <span>:</span>
+            <span id="min">00</span>
+            <span>:</span>
+            <span id="sec">00</span>
+        </div>
+    </main>
+
+    <script>
+
+        const hour = document.getElementById("hr");
+        const min = document.getElementById("min");
+        const sec = document.getElementById("sec");
+
+        setInterval(()=>{
+            const time = new Date();
+            hr = time.getHours() - 12 ;
+            hour.innerText = (hr<10?"0":"") + hr;
+            min.innerText = (time.getMinutes()<10?"0":"") + time.getMinutes();
+            sec.innerText = (time.getSeconds()<10?"0":"") + time.getSeconds();
+        },1000)
+
+    </script>
+  </body>
+</html>
