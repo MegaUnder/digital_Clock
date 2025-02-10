@@ -52,7 +52,7 @@ main::after{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5rem 0;
+    padding: 2rem 0;
     gap: 1rem;
 }
 .time>span{
