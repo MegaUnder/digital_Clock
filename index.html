@@ -15,6 +15,8 @@
             <span id="min">00</span>
             <span>:</span>
             <span id="sec">00</span>
+            <span></span>
+            <span id="am_pm"></span>
         </div>
     </main>
 
@@ -23,9 +25,11 @@
         const hour = document.getElementById("hr");
         const min = document.getElementById("min");
         const sec = document.getElementById("sec");
+        const clock = document.getElementById("am_pm");
 
         setInterval(()=>{
             const time = new Date();
+            clock.innerText = (time.getHours()>12?"PM":"AM");
             hr = time.getHours() - 12 ;
             hour.innerText = (hr<10?"0":"") + hr;
             min.innerText = (time.getMinutes()<10?"0":"") + time.getMinutes();
